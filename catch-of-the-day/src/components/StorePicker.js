@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { getFunName } from '../helpers'
 
+
 class StorePicker extends Component {
   goToStore(event) {
     event.preventDefault()
-    console.log(this.storeInput.value)
+    const storeId = this.storeInput.value
+    console.log(`Going to ${storeId}`)
+    this.props.history.push(`/store/${storeId}`)
   }
 
   render() {
