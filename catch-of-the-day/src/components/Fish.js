@@ -8,9 +8,9 @@ class Fish extends Component {
     const buttonText = isAvailable ? 'Add To Order' : 'Sold Out!'
     return (
       <li className="menu-fish">
-        <img src={details.image} alt={name} />
+        <img src={details.image} alt={details.name} />
         <h3 className="fish-name">
-          {name}
+          {details.name}
           <span className="price">{formatPrice(details.price)}</span>
         </h3>
         <p>{details.desc}</p>
